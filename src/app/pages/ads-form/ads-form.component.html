@@ -1,0 +1,59 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <mat-card class="mt20">
+                <h1 class="text-center" style="margin-top:40px;">Ads Information</h1>
+                <!-- formSubmit is written in signup.ts
+                ngSubmit is a event to submit
+                 -->
+                <form >
+                    <mat-form-field class="full-width" appearance="outline">
+                        
+                        <mat-label>Company name</mat-label>
+                        <input
+                        required
+                        matInput placeholder="Enter company name">
+
+                    </mat-form-field>
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Product name</mat-label>
+                        <input
+                        required
+                        matInput placeholder="Enter product name">
+                        
+                    </mat-form-field>
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Price</mat-label>
+                        <input
+                        required
+                      
+                        matInput placeholder="Enter price">
+                        
+                    </mat-form-field>
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Description</mat-label>
+                        <input
+                        
+                        matInput placeholder="Enter description">
+                        
+                    </mat-form-field>
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Date</mat-label>
+                        <input
+                        required
+                    
+                        matInput placeholder="Enter date">
+                        
+                    </mat-form-field>
+                    
+                    <div class="container text-center">
+                        
+                        <button type="submit" mat-raised-button color="primary">Submit</button>
+                    </div>
+                </form>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

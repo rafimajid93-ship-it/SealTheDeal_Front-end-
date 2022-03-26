@@ -1,0 +1,46 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  
+  .color_nav{
+    background-color:#C4C4C4;
+    padding: 20px;
+    color:white;
+  }
+  .color_ad{
+    background-color:#3B5998;
+    padding: 10px;
+    border-radius: 50px;
+    color: white;
+    margin-left:1300px;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  .color_sea{
+    background-color:#c5cae9;
+        padding: 10px;
+  }
+  .search{
+    
+    padding: 15px;
+    border-radius: 50px;
+    margin-left: 110px;
+    padding-right: 400px;
+    
+  }
+  .login{
+    color:black;
+    background-color:#c5cae9;
+    
+  }
+  mat-nav-list.list-horizontal {
+    display: flex;
+    flex-direction: row;
+   }
+   .b_background{
+    background-color:#c5cae9!important;
+    border:none;
+    color:white;
+   }
+  
+  

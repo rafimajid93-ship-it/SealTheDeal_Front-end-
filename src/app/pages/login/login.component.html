@@ -1,0 +1,42 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <mat-card class="mt20">
+                    <h1 class="text-center" style="margin-top:40px;">Login</h1>
+                    <!-- formSubmit is written in signup.ts
+                ngSubmit is a event to submit
+                 -->
+                    <form>
+                        <mat-form-field class="full-width" appearance="outline">
+
+                            <mat-label>Username</mat-label>
+                            <input required matInput placeholder="Enter your Username">
+
+                        </mat-form-field>
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Password</mat-label>
+                            <input required type="password" matInput placeholder="Enter password">
+
+                        </mat-form-field>
+                        
+                        <p>
+                     <div class="container text-center">
+
+                            <button type="submit" mat-raised-button color="primary">Login</button>
+                            <p class="forgot">Forgotten Password?</p>
+                        </div>
+                        <br><br>
+                        <mat-divider></mat-divider>
+                        <br><br>
+                        <div class="container text-center">
+
+                            <button type="submit" mat-raised-button class="create">Create New Account</button>
+                            
+                        </div>
+                    </form>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

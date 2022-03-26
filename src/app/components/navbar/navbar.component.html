@@ -1,0 +1,49 @@
+<div class="bootstrap-wrapper">
+ 
+    <div class="row ml20">
+      <div class="col-md-4">
+        <h1 class="color_nav"><a [routerLink]="'/'">SEAL THE DEAL</a></h1>
+      </div>
+      <div class="col-md-8">
+        <h1>Ads</h1>
+      </div>
+      
+  </div>
+  <div class="color_sea">
+    
+      <button [routerLink]="'/adsForm'" class="color_ad">Post Your Ads</button>
+     
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <form class="example-form">
+            <mat-form-field class="example-full-width" >
+              <mat-label>Email</mat-label>
+              
+              <input class="search" placeholder="What are you looking for?">
+              
+            </mat-form-field>
+          </form>
+        </div>
+      </div>
+      
+      <mat-toolbar>
+        <mat-toolbar-row>
+      
+          <span class="example-spacer"></span>
+          <button mat-icon-button class="b_background example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+            <mat-icon class="ml10" [routerLink]="'/login'">login</mat-icon>
+           
+          </button>
+          <a [routerLink]="'/login'" class="b_background">Login</a>
+          <button mat-icon-button class="ml20 b_background example-icon" aria-label="Example icon-button with share icon">
+            <mat-icon [routerLink]="'/register'" class="b_background">how_to_reg</mat-icon>
+          </button>
+          <a [routerLink]="'/register'" class="b_background">Register</a>
+        </mat-toolbar-row>
+      </mat-toolbar>   
+  </div>
+
+  
+
+</div>
+
