@@ -7,37 +7,49 @@
                     <!-- formSubmit is written in signup.ts
                 ngSubmit is a event to submit
                  -->
-                    <form>
+                    <form (ngSubmit)="formSubmit()">
                         <mat-form-field class="full-width" appearance="outline">
 
                             <mat-label>Name</mat-label>
-                            <input required matInput placeholder="Enter your name">
+                            <input
+                            [(ngModel)]="user.name"
+                            name="name"
+                            required matInput placeholder="Enter your name">
 
                         </mat-form-field>
                         <mat-form-field class="full-width" appearance="outline">
                             <mat-label>Password</mat-label>
-                            <input required type="password" matInput placeholder="Enter password">
+                            <input
+                            [(ngModel)]="user.password"
+                            name="password"
+                            required type="password" matInput placeholder="Enter password">
 
                         </mat-form-field>
                         <mat-form-field class="full-width" appearance="outline">
                             <mat-label>Email</mat-label>
-                            <input required matInput placeholder="Enter email">
+                            <input
+                            [(ngModel)]="user.email"
+                            name="email"
+                            required matInput placeholder="Enter email">
 
                         </mat-form-field>
             
                         <mat-form-field class="full-width" appearance="outline">
                             <mat-label>Phone</mat-label>
-                            <input required matInput placeholder="Enter date">
+                            <input
+                            [(ngModel)]="user.phone"
+                            name="phone"
+                            required matInput placeholder="Enter date">
 
                         </mat-form-field>
 
                         <h4>Select Role</h4>
                         <mat-form-field appearance="fill">
                             <mat-label>Role</mat-label>
-                            <mat-select>
-                                <mat-option value="option1">Admin</mat-option>
-                                <mat-option value="option2">Consumer</mat-option>
-                                <mat-option value="option3">Vendor</mat-option>
+                            <mat-select [(value)]="user.role">
+                                <mat-option   value="Admin">Admin</mat-option>
+                                <mat-option   value="Consumer">Consumer</mat-option>
+                                <mat-option   value="Vendor">Vendor</mat-option>
                             </mat-select>
                         </mat-form-field>
                         <div class="container text-center">

@@ -1,0 +1,14 @@
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import baseUrl from './helper';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class UserServiceService {
+
+  constructor(private http:HttpClient) { }
+  addUser(user:any){
+    return this.http.post(`${baseUrl}/user/`,user)
+  }
+}

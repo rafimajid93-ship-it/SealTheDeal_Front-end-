@@ -17,6 +17,18 @@ import {MatButtonModule} from '@angular/material/button';
 import { SignupComponent } from './pages/signup/signup.component';
 import {MatSelectModule} from '@angular/material/select';
 import { LoginComponent } from './pages/login/login.component';
+import { FormsModule } from '@angular/forms';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { HttpClientModule } from '@angular/common/http';
+import { authInterceptorProviders } from './service/auth.interceptor';
+import { AdminComponent } from './pages/admin/admin.component';
+import { VendorComponent } from './pages/vendor/vendor.component';
+import { ConsumerComponent } from './pages/consumer/consumer.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { ViewLegalClientComponent } from './pages/view-legal-client/view-legal-client.component';
+import { VendorFormComponent } from './pages/vendor-form/vendor-form.component';
+import { ViewApartmentComponent } from './pages/view-apartment/view-apartment.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +37,15 @@ import { LoginComponent } from './pages/login/login.component';
     HomeComponent,
     AdsFormComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
+    AdminComponent,
+    VendorComponent,
+    ConsumerComponent,
+    SidebarComponent,
+    DashboardComponent,
+    ViewLegalClientComponent,
+    VendorFormComponent,
+    ViewApartmentComponent
   ],
   imports: [
     BrowserModule,
@@ -38,10 +58,13 @@ import { LoginComponent } from './pages/login/login.component';
     MatCardModule,
     MatFormFieldModule,
     MatButtonModule,
-    MatSelectModule
+    MatSelectModule,
+    FormsModule,
+    MatSnackBarModule,
+    HttpClientModule
     
   ],
-  providers: [],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

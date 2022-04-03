@@ -1,5 +1,5 @@
 <div class="bootstrap-wrapper">
- 
+ <div *ngIf="flag">
     <div class="row ml20">
       <div class="col-md-4">
         <h1 class="color_nav"><a [routerLink]="'/'">SEAL THE DEAL</a></h1>
@@ -30,18 +30,42 @@
         <mat-toolbar-row>
       
           <span class="example-spacer"></span>
-          <button mat-icon-button class="b_background example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-            <mat-icon class="ml10" [routerLink]="'/login'">login</mat-icon>
+          <button  mat-icon-button example-icon favorite-icon aria-label="Example icon-button with heart icon">
+            <mat-icon [routerLink]="'/login'">login</mat-icon>
            
           </button>
-          <a [routerLink]="'/login'" class="b_background">Login</a>
-          <button mat-icon-button class="ml20 b_background example-icon" aria-label="Example icon-button with share icon">
-            <mat-icon [routerLink]="'/register'" class="b_background">how_to_reg</mat-icon>
+          <a [routerLink]="'/login'">Login</a>
+          <button mat-icon-button clasexample-icon aria-label="Example icon-button with share icon">
+            <mat-icon [routerLink]="'/register'">how_to_reg</mat-icon>
           </button>
-          <a [routerLink]="'/register'" class="b_background">Register</a>
+          <a [routerLink]="'/register'">Register</a>
+    
         </mat-toolbar-row>
       </mat-toolbar>   
   </div>
+</div>
+<!-- //working on loggedin  -->
+ 
+<div *ngIf="!flag" class="color_sea">
+  <mat-toolbar class="color_sea1">
+    <mat-toolbar-row>
+      <a class="color_white" [routerLink]="'/'">Seal The Deal</a>
+    <span class="example-spacer"></span>
+     
+      
+      <button mat-icon-button class="ml20">
+        <mat-icon [routerLink]="'/user'" >perm_identity</mat-icon>
+      </button>
+      <a [routerLink]="'/user'" >{{user.name}}</a>
+
+      <button (click)="logout()"  mat-icon-button class="ml20">
+        <mat-icon >exit_to_app</mat-icon>
+      </button>
+      <a (click)="logout()">Logout</a>
+    </mat-toolbar-row>
+  </mat-toolbar>   
+</div>
+
 
   
 

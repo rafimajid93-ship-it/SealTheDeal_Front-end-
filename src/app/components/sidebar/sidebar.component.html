@@ -1,0 +1,57 @@
+<mat-card>
+    <mat-action-list>
+        <div mat-subheader>Menu</div>
+        <button mat-list-item routerLink="/">
+            <mat-icon mat-list-icon>home</mat-icon>Home
+        </button>
+        <button mat-list-item routerLink="/admin/profile">
+            <mat-icon mat-list-icon>account_circle</mat-icon>Profile
+        </button>
+        <button *ngIf="flag==='product'" mat-list-item routerLink="/admin/categories">
+            <mat-icon mat-list-icon>list</mat-icon>Products
+        </button>
+        <button *ngIf="flag==='product'" mat-list-item routerLink="/user/addApartment">
+            <mat-icon mat-list-icon>add_circle_outline</mat-icon>Add prouct
+        </button>
+        <button *ngIf="flag==='furniture'" mat-list-item routerLink="/admin/categories">
+            <mat-icon mat-list-icon>list</mat-icon>furniture
+        </button>
+            <button *ngIf="flag==='furniture'" mat-list-item routerLink="/user/addApartment">
+                <mat-icon mat-list-icon>add_circle_outline</mat-icon>Add furniture
+            </button>
+            <button *ngIf="flag==='appartment'" mat-list-item routerLink="/admin/categories">
+                <mat-icon mat-list-icon>list</mat-icon>Appartment
+            </button>
+            <button *ngIf="flag==='appartment'" mat-list-item routerLink="/user/addApartment">
+                <mat-icon mat-list-icon>add_circle_outline</mat-icon>Add appartment
+            </button>
+            <button *ngIf="flag==='mental_support'" mat-list-item routerLink="/admin/categories">
+                <mat-icon mat-list-icon>list</mat-icon>Appoinment
+            </button>
+            <button *ngIf="flag==='mental_support'" mat-list-item routerLink="/user/addApartment">
+                <mat-icon mat-list-icon>add_circle_outline</mat-icon>Add appoinment
+            </button>
+            <button *ngIf="flag==='legal_support'" mat-list-item routerLink="/admin/categories">
+                <mat-icon mat-list-icon>list</mat-icon>Appoinment
+            </button>
+            <button *ngIf="flag==='legal_support'" mat-list-item routerLink="/user/addApartment">
+                <mat-icon mat-list-icon>add_circle_outline</mat-icon>Add appoinment
+            </button>
+            <button *ngIf="flag==='water_supplier'" mat-list-item routerLink="/admin/categories">
+                <mat-icon mat-list-icon>list</mat-icon>View Consumers
+            </button>
+            <button *ngIf="flag==='water_supplier'" mat-list-item routerLink="/user/addApartment">
+                <mat-icon mat-list-icon>add_circle_outline </mat-icon>Add suppliers
+            </button>
+            <button *ngIf="flag==='house_service'" mat-list-item routerLink="/admin/categories">
+                <mat-icon mat-list-icon>list</mat-icon>View services
+            </button>
+            <button *ngIf="flag==='house_service'" mat-list-item routerLink="/user/addApartment">
+                <mat-icon mat-list-icon>add_circle_outline</mat-icon>Add Service
+            </button>
+
+            <button mat-list-item routerLink="/user/addApartment">
+                <mat-icon mat-list-icon>history</mat-icon>History
+            </button>
+    </mat-action-list>
+</mat-card>
