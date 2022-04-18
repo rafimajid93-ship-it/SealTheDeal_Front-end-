@@ -4,7 +4,7 @@
   
   .color_nav{
     background-color:#C4C4C4;
-    padding: 20px;
+    padding: 30px;
     color:black;
   }
   .color_ad{
@@ -45,6 +45,33 @@
     display: flex;
     flex-direction: row;
    }
-  
-  
-  
+   .g_b{
+     color:rgb(33, 192, 33);
+     padding:2px;
+     border-radius:50%;
+   }
+.colo{
+  background-color:#3B5998;
+}
+.mSize{
+  max-width:300px;
+  height: 180px;
+}
+.colW{
+  color:white;
+}
+.tb:hover {
+  font-size:70px;
+  color: rgb(40, 155, 205);
+}
+.tb{
+  font-size:70px;
+  color: white;
+}
+.cb:hover{
+  background-color:white;
+  color: rgb(40, 155, 205)!important;
+}
+.mt30{
+  margin-top:45px;
+}

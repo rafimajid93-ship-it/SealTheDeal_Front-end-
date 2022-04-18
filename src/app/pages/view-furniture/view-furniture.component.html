@@ -1,0 +1,19 @@
+
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="mt20 row">
+            <div class="col-md-3 mt20" *ngFor="let f of furnitures">
+                <mat-card class="content example-card">
+                    <img mat-card-image class="" src="../../../assets/img/default.jpg">
+                    <mat-card-content>
+                      <a>{{f.product_name}}</a>
+                      <p><b>${{f.price}}</b></p>
+                      <p>{{f.description}}</p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button (click)="cartCounter(f)" color="primary" mat-button><mat-icon mat-list-icon>add_shopping_cart</mat-icon>Add to cart</button>
+                        <button mat-button>Quantity:{{f.quantity}}</button>
+                      </mat-card-actions>
+                </mat-card>
+            </div>
+            </div></div></div>

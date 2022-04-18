@@ -1,0 +1,75 @@
+<div class="bootstrap-wrapper">
+
+    <mat-card  class="mt20">
+        <h1 style="margin-top:40px;">Furniture Details:</h1>
+        <form (ngSubmit)="furnitureSubmit()">
+            <div class="container">
+            <div class="row">
+                <div class="col-md-3 offset-md-3">
+                        <mat-form-field class="full-width text-center" appearance="outline">
+                            <mat-label>Furniture name</mat-label>
+                            <input
+                            [(ngModel)]="furniture.product_name"
+                            name="product_name" matInput placeholder="Enter product name">
+                            <mat-hint>Name</mat-hint>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                        <mat-form-field class="full-width text-center" appearance="outline">
+                             <mat-label>Price</mat-label>
+                            <input
+                            [(ngModel)]="furniture.price"
+                            name="shopDetails" matInput placeholder="Enter prouct price">
+                            <mat-hint>Price</mat-hint>
+                        </mat-form-field>
+                    </div>
+                </div>
+                   <div class="row">
+                    <div class="col-md-3 offset-md-3">
+                            <mat-form-field class="full-width text-center" appearance="outline">
+                                <mat-label>Description</mat-label>
+                                <input
+                                [(ngModel)]="furniture.description"
+                                name="description" matInput placeholder="Enter description">
+                                <mat-hint>Description</mat-hint>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+                            <mat-form-field class="full-width text-center" appearance="outline">
+                                 <mat-label>Quantity</mat-label>
+                                <input
+                                [(ngModel)]="furniture.quantity"
+                                name="quantity" matInput placeholder="Enter quantity">
+                                <mat-hint>Quantity</mat-hint>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 offset-md-3">
+                                <mat-form-field class="full-width text-center" appearance="outline">
+                                    <mat-label>Address</mat-label>
+                                    <input
+                                    [(ngModel)]="furniture.address"
+                                    name="address" matInput placeholder="Enter address">
+                                    <mat-hint>Adress</mat-hint>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6">
+                                <mat-form-field class="full-width text-center" appearance="outline">
+                                     <mat-label>Date</mat-label>
+                                    <input type="date"
+                                    [(ngModel)]="furniture.date"
+                                    name="date" matInput placeholder="Enter date">
+                                    <mat-hint>Date</mat-hint>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                      
+                </div>
+            <div class="container text-center">
+                <button type="submit" mat-raised-button color="primary">Submit</button>
+            </div>
+        </form>
+    </mat-card>
+  
+</div>

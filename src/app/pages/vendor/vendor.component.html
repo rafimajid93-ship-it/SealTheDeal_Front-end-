@@ -1,7 +1,7 @@
 <div class="bootstrap-wrapper">
 
     <mat-card *ngIf="!flag" class="mt20">
-        <h1 style="margin-top:40px;">Please complete your profile:</h1>
+        <h1 style="margin-top:40px;">Please complete your profile:</h1> -->
         <!-- {{loginData|json}} -->
         <form (ngSubmit)="formSubmit()">
             <div class="container">
@@ -60,26 +60,27 @@
                                 <mat-select [(value)]="vendor.type">
                                     <mat-option   value="water_supplier">Water Supplier</mat-option>
                                     <mat-option   value="house_service">House Service</mat-option>
-                                    <mat-option   value="legal_support">Legal Support</mat-option>
-                                    <mat-option   value="mental_support">Mental Support</mat-option>
                                     <mat-option   value="appartment">Appartment</mat-option>
                                     <mat-option   value="product">Product</mat-option>
                                     <mat-option   value="furniture">Furniture</mat-option>
                                 </mat-select>
                             </mat-form-field>
                             </div>
-                            
+                        </div>
+                            <div class="row">
+                            <div class="col-md-3 offset-md-3">
+                                <input (change)="selectFile($event)" type="file"/>
+                            </div>
+                        </div>
         
-                           </div>
+                           
                    
             </div>
             <div class="btnMar">
 
-                <button type="submit" mat-raised-button color="primary">Save</button>
+                <button (click)="uploadFile()" type="submit" mat-raised-button color="primary">Save</button>
             </div>
         </form>
     </mat-card>
-    <div *ngIf="flag">
-        <h1>Profile</h1>
-    </div>
+
 </div>

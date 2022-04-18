@@ -1,0 +1,31 @@
+.cardS{
+    max-width: 250px;
+    max-height: 400px;
+}
+.red-color{
+    color: #e53935;
+}
+
+.content{
+    max-height: 350px!important;
+    max-width: 200px;
+    text-align: center;
+    
+}
+a{
+    font-weight: bold;
+    font-size: 20px;
+    
+    
+}
+mat-card{
+    background-color:#c5cae9!important;
+}
+img{
+   
+    max-width:200px;
+    max-height:150px;
+}
+.divi{
+    padding:2px;
+}

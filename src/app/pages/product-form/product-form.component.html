@@ -1,0 +1,57 @@
+<div class="bootstrap-wrapper">
+
+    <mat-card  class="mt20">
+        <h1 style="margin-top:40px;">Product Details:</h1>
+        <form (ngSubmit)="productSubmit()">
+            <div class="container">
+            <div class="row">
+                <div class="col-md-3 offset-md-3">
+                        <mat-form-field class="full-width text-center" appearance="outline">
+                            <mat-label>Product name</mat-label>
+                            <input
+                            [(ngModel)]="product.product_name"
+                            name="product_name" matInput placeholder="Enter product name">
+                            <mat-hint>Name</mat-hint>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                        <mat-form-field class="full-width text-center" appearance="outline">
+                             <mat-label>Price</mat-label>
+                            <input
+                            [(ngModel)]="product.price"
+                            name="price" matInput placeholder="Enter prouct price">
+                            <mat-hint>Price</mat-hint>
+                        </mat-form-field>
+                    </div>
+                </div>
+                   <div class="row">
+                    <div class="col-md-3 offset-md-3">
+                        <mat-form-field class="full-width text-center" appearance="outline">
+                            <mat-label>Description</mat-label>
+                            <input
+                            [(ngModel)]="product.description"
+                            name="description" matInput placeholder="Enter product description">
+                            <mat-hint>Description</mat-hint>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                      
+                        <mat-form-field appearance="fill">
+                            <mat-label>Type</mat-label>
+                            <mat-select [(value)]="product.type">
+                                <mat-option   value="Old">Old</mat-option>
+                                <mat-option   value="New">New</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        </div>
+                        
+                    </div>
+                   
+                </div>
+            <div class="container text-center">
+                <button type="submit" mat-raised-button color="primary">Submit</button>
+            </div>
+        </form>
+    </mat-card>
+  
+</div>

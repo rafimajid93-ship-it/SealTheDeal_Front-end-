@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { VendorService } from 'src/app/service/vendor.service';
 
 @Component({
   selector: 'app-ads-form',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdsFormComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private vendorService:VendorService) { }
+  ads:any
   ngOnInit(): void {
+    
   }
+
 
 }

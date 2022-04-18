@@ -37,6 +37,7 @@ export class SignupComponent implements OnInit {
           //   duration: 2000
           // });
           Swal.fire('Successfull','','success')
+          window.location.href="/register"
         },
         (error)=>{
           Swal.fire('Something went wrong','','error')

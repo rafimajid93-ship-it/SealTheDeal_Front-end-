@@ -1,6 +1,9 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { VendorService } from 'src/app/service/vendor.service';
 import Swal from 'sweetalert2'
+import baseUrl from 'src/app/service/helper';
+
 @Component({
   selector: 'app-vendor',
   templateUrl: './vendor.component.html',
@@ -9,19 +12,33 @@ import Swal from 'sweetalert2'
 export class VendorComponent implements OnInit {
 
 
-  constructor(private vendorService:VendorService) { }
+  constructor(private vendorService:VendorService,private http:HttpClient) { }
 
   vendor={
     shopName:'',
     shopDetails:'',
     idPic:'',
     address:'',
-    type:''
-
-
-  }
+    type:'',
+ }
+  file:any;
   flag=true;
+  selectFile(event:any){
+    this.file=event.target.files[0];
+  }
+  uploadFile(){
+    let formData=new FormData();
+    formData.append('file',this.file)
+    this.http.post(`${baseUrl}/user/fileUpload`,formData).subscribe(
+      (data)=>{
 
+      },(error)=>{
+        alert('Error')
+      }
+    )
+  }
+
+  
   ngOnInit(): void {
     console.log('doing')
     this.vendorService.getVendor().subscribe(
@@ -44,6 +61,10 @@ export class VendorComponent implements OnInit {
    
   }
   formSubmit(){
+  //  let formData = new FormData();
+  //  formData.append('file',this.file)
+
+
     console.log(this.vendor)
     if(this.vendor.address==null ||this.vendor.idPic==''||this.vendor.shopDetails==null){
       // alert("Please enter username")

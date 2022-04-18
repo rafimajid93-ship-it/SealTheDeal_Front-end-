@@ -1,0 +1,65 @@
+<div class="bootstrap-wrapper">
+
+    <mat-card class="mt20">
+        <h1 style="margin-top:40px;">Please complete your profile:</h1>
+        <!-- {{loginData|json}} -->
+        <form (ngSubmit)="formSubmit()">
+            <div class="container">
+            <div class="row">
+                <div class="col-md-3 offset-md-3">
+                        <mat-form-field class="full-width text-center" appearance="outline">
+
+                            <mat-label>Description</mat-label>
+                            <input
+                            [(ngModel)]="legal.description"
+                            
+                            name="specialized" matInput placeholder="Enter your specialization">
+                            <mat-hint>Description</mat-hint>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                        <mat-form-field class="full-width text-center" appearance="outline">
+
+                            <mat-label>Registration number</mat-label>
+                            <input
+                            [(ngModel)]="legal.registrationNumber"
+                            name="registrationNumber" matInput placeholder="Enter registration number">
+                            <mat-hint>Registration number</mat-hint>
+                        </mat-form-field>
+                    </div>
+
+                   </div>
+                   <div class="row">
+                    <div class="col-md-3 offset-md-3">
+                            <mat-form-field class="full-width text-center" appearance="outline">
+    
+                                <mat-label>Appoinment</mat-label>
+                                <input
+                                [(ngModel)]="legal.appointmentContact"
+                                
+                                name="appointmentContact" matInput placeholder="Enter your contact">
+                                <mat-hint>Contact</mat-hint>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Lawyer type</mat-label>
+                                <mat-select [(value)]="legal.type">
+                                    <mat-option   value="Legal">Legal</mat-option>
+                                    <mat-option   value="Criminal">Criminal</mat-option>
+
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+    
+                       </div>
+                   
+            </div>
+            <div class="btnMar">
+
+                <button type="submit" mat-raised-button color="primary">Save</button>
+            </div>
+        </form>
+    </mat-card>
+
+</div>

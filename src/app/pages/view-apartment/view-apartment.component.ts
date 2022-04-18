@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { VendorService } from 'src/app/service/vendor.service';
 
 @Component({
   selector: 'app-view-apartment',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewApartmentComponent implements OnInit {
 
-  constructor() { }
+  constructor(private vendorService:VendorService) { }
 
+  apartments:any
   ngOnInit(): void {
+  this.vendorService.getApartment().subscribe(
+    (data)=>{
+      this.apartments=data;
+
+    },
+    (error)=>{
+
+    }
+  )
   }
+
+ 
+  
 
 }

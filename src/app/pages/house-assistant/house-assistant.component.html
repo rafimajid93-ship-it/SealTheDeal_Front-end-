@@ -1,0 +1,61 @@
+<div class="bootstrap-wrapper">
+
+    <mat-card class="mt20">
+        <h1 style="margin-top:40px;">Please complete your profile:</h1>
+        <!-- {{loginData|json}} -->
+        <form (ngSubmit)="formSubmit()">
+            <div class="container">
+            <div class="row">
+                <div class="col-md-3 offset-md-3">
+                        <mat-form-field class="full-width text-center" appearance="outline">
+
+                            <mat-label>Address</mat-label>
+                            <input
+                            [(ngModel)]="houseAssistant.address"
+                            
+                            name="address" matInput placeholder="Enter address">
+                            <mat-hint>Address</mat-hint>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                        <mat-form-field class="full-width text-center" appearance="outline">
+
+                            <mat-label>Price</mat-label>
+                            <input
+                            [(ngModel)]="houseAssistant.price"
+                            name="price" matInput placeholder="Enter price">
+                            <mat-hint>Price</mat-hint>
+                        </mat-form-field>
+                    </div>
+
+                   </div>
+                   <div class="row">
+                    <div class="col-md-3 offset-md-3">
+                            <mat-form-field class="full-width text-center" appearance="outline">
+    
+                                <mat-label>Rating</mat-label>
+                                <input
+                                [(ngModel)]="houseAssistant.rating"
+                                name="address" matInput placeholder="Enter rating">
+                                <mat-hint>Rating</mat-hint>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Assistant type</mat-label>
+                                <mat-select [(value)]="houseAssistant.type">
+                                    <mat-option   value="Maid">Maid</mat-option>
+                                    <mat-option   value="Electrician">House Service</mat-option>
+
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+            </div>
+        </div>
+            <div class="btnMar">
+                <button type="submit" mat-raised-button color="primary">Save</button>
+            </div>
+        </form>
+    </mat-card>
+
+</div>

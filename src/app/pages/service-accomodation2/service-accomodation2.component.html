@@ -1,0 +1,35 @@
+<div class="bootstrap-wrapper">
+    <div class="mt20 container">
+  <table mat-table [dataSource]="apartment" class="mat-elevation-z8">
+  
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> Request No. </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef> Status </th>
+      <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+    </ng-container>
+  
+  
+
+    
+    <ng-container matColumnDef="actions">
+      <mat-header-cell class="mt20 ml20"  *matHeaderCellDef > Actions </mat-header-cell>
+      <mat-cell *matCellDef="let row" >
+           <button color="primary" mat-button >Approve</button>
+      </mat-cell>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  
+  </div>
+  </div>

@@ -1,0 +1,19 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <mat-card class="mt20">
+                    <h1 class="text-center" style="margin-top:40px;">Appartment Information</h1>
+                    <h3>House Owner: {{apartment.name}}</h3>
+                    <mat-card-title>Address: {{apartment.address}}</mat-card-title>
+ <mat-card-subtitle>Rent: {{apartment.rent}}</mat-card-subtitle>
+<mat-card-content>Description:{{apartment.description}}</mat-card-content>
+<mat-card-actions>
+    <button (click)="accom(apartment)" mat-stroked-button color="primary">Request for booking</button>
+</mat-card-actions>
+
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

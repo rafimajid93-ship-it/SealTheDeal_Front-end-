@@ -1,0 +1,39 @@
+<div class="bootstrap-wrapper">
+
+    <mat-card class="mt20">
+        <h1 style="margin-top:40px;">Please complete your profile:</h1>
+        <!-- {{loginData|json}} -->
+        <form (ngSubmit)="formSubmit()">
+            <div class="container">
+            <div class="row">
+                <div class="col-md-3 offset-md-3">
+                        <mat-form-field class="full-width text-center" appearance="outline">
+
+                            <mat-label>Agency Name</mat-label>
+                            <input
+                            [(ngModel)]="employeer.shopName"
+                            
+                            name="shopName" matInput placeholder="Enter name">
+                            <mat-hint>Name</mat-hint>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                        <mat-form-field class="full-width text-center" appearance="outline">
+
+                            <mat-label>NID number</mat-label>
+                            <input
+                            [(ngModel)]="employeer.nid"
+                            name="agencyContact" matInput placeholder="Enter national id number">
+                            <mat-hint>NID</mat-hint>
+                        </mat-form-field>
+                    </div>
+
+                   </div>
+        </div>
+            <div class="btnMar">
+                <button type="submit" mat-raised-button color="primary">Save</button>
+            </div>
+        </form>
+    </mat-card>
+
+</div>

@@ -28,11 +28,8 @@ export class ConsumerComponent implements OnInit {
       this.consumerService.addConsumer(this.consumer).subscribe(
         (data:any)=>{
           console.log(this.consumer)
-          // alert("Successfully saved")
-          // this._snackBar.open('Successfully saved','',{
-          //   duration: 2000
-          // });
           Swal.fire('Successfull','','success')
+          window.location.href="/user/ven"
         },
         (error)=>{
           Swal.fire('Something went wrong','','error')

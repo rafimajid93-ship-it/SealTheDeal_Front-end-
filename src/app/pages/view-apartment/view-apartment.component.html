@@ -1,0 +1,20 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="mt20 row">
+            <div class="col-md-3 mt20" *ngFor="let f of apartments">
+<mat-card class="example-card">
+    <mat-card-title-group>
+      <mat-card-title>{{f.address}}</mat-card-title>
+      <mat-card-subtitle>{{f.rent}}</mat-card-subtitle>
+      <img mat-card-sm-image src="https://images.unsplash.com/photo-1515263487990-61b07816b324?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YXBhcnRtZW50fGVufDB8fDB8fA%3D%3D&w=1000&q=80" >
+    </mat-card-title-group>
+    <mat-card-content>
+     {{f.description}}
+    </mat-card-content>
+    
+    <button class="ml55 mt10" [routerLink]="'/user/serviceAppartment/'+ f.id" mat-stroked-button color="primary">Contact With Owner</button>
+  </mat-card>
+  </div>
+  </div>
+  </div>
+  </div>

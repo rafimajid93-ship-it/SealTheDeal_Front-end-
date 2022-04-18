@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { DoctorService } from 'src/app/service/doctor.service';
+import { EmployeerService } from 'src/app/service/employeer.service';
+import { HouseAssistantService } from 'src/app/service/house-assistant.service';
+import { LegalService } from 'src/app/service/legal.service';
 import { LoginService } from 'src/app/service/login.service';
 import { VendorService } from 'src/app/service/vendor.service';
 import Swal from 'sweetalert2'
@@ -13,7 +17,9 @@ export class LoginComponent implements OnInit {
   vendor=true;
   consumer=true;
   admin=true;
-  constructor(private snack:MatSnackBar,private login:LoginService,private vendorService:VendorService) { }
+  constructor(private snack:MatSnackBar,private login:LoginService,private vendorService:VendorService,
+    private legalService:LegalService,private doctorService:DoctorService,
+    private houseService:HouseAssistantService,private employeerService:EmployeerService) { }
  
   loginData={
     username:'',
@@ -50,34 +56,94 @@ export class LoginComponent implements OnInit {
                   
                 window.location.href="/admin"
                   
-               // this.router.navigate(['admin'])
-                //this.login.loginStatusSubject.next(true);
-              }else if(this.login.getUserRole()=='Vendor'){
-                //this.router.navigate(['user-dashboard'])
-
-                this.vendorService.getVendor().subscribe(
+              }
+              else if(this.login.getUserRole()=='Doctor'){
+                this.doctorService.getDoctor().subscribe(
                   (data:any)=>{
                     if(data==null){
-                      window.location.href="/vendor"
-                    }
+                      window.location.href="/doctor"
+                      }
                     else{
                       window.location.href="/user/ven"
                     }
                   },
                   (error)=>{}
                 ) 
-                // if(this.vendorService.getVendor()==null){
-                //   window.location.href="/vendor"
-                // }
-                // else{
-                //   window.location.href="/user/ven"
-                // }
+                  
+              }
+              else if(this.login.getUserRole()=='Employeer'){
+                this.employeerService.getEmployeer().subscribe(
+                  (data:any)=>{
+                    if(data==null){
+                      window.location.href="/employeer"
+                      }
+                    else{
+                      window.location.href="/user/ven"
+                    }
+                  },
+                  (error)=>{}
+                ) 
+                  
+              }
+              else if(this.login.getUserRole()=='HouseAssistant'){
+                this.houseService.getAssistant().subscribe(
+                  (data:any)=>{
+                    if(data==null){
+                      window.location.href="/assistant"
+                      }
+                    else{
+                      window.location.href="/user/ven"
+                    }
+                  },
+                  (error)=>{}
+                ) 
+                  
+              }
+              else if(this.login.getUserRole()=='Legal'){
+                  
+                this.legalService.getLegal().subscribe(
+                  (data:any)=>{
+                    if(data==null){
+                      window.location.href="/legal"
+                      }
+                    else{
+                      window.location.href="/user/ven"
+                    }
+                  },
+                  (error)=>{}
+                )
                 
-                
+                  
+              }
+              
+              else if(this.login.getUserRole()=='Vendor'){
+                //this.router.navigate(['user-dashboard'])
+                  this.vendorService.getVendor().subscribe(
+                  (data:any)=>{
+                    if(data==null){
+                      window.location.href="/vendor"
+                      }
+                    else{
+                      window.location.href="/user/ven"
+                    }
+                  },
+                  (error)=>{}
+                ) 
+                   
               }
               else{
                 
-                window.location.href="/consumer"
+                this.vendorService.getConsumer().subscribe(
+                  (data:any)=>{
+                    if(data==null){
+                      window.location.href="/consumer"
+                      }
+                    else{
+                      window.location.href="/user/ven"
+                    }
+                  },
+                  (error)=>{}
+                ) 
               }
               
             }

@@ -1,17 +1,26 @@
 <div class="bootstrap-wrapper">
  <div *ngIf="flag">
-    <div class="row ml20">
+    <div class="row">
       <div class="col-md-4">
         <h1 class="color_nav"><a [routerLink]="'/'">SEAL THE DEAL</a></h1>
       </div>
-      <div class="col-md-8">
-        <h1>Ads</h1>
+      <div class="colo col-md-8 colW">
+        <div class="row">
+          <div class="col-md-4">
+            <img mat-card-image class="mSize" src="../../../assets/img/3.jpg" alt="Photo of a Shiba Inu">
+        
+          </div>
+          <div class="cb col-md-8">
+            <h1 class="tb mt30">{{ads.price}}% off <br><br>Shop at <b>{{ads.company_name}}</b></h1>
+           
+          </div>
+        </div>
       </div>
       
   </div>
   <div class="color_sea">
     
-      <button [routerLink]="'/adsForm'" class="color_ad">Post Your Ads</button>
+      <button [routerLink]="'/user/addAds'" class="color_ad">Post Your Ads</button>
      
       <div class="row">
         <div class="col-md-6 offset-md-3">
@@ -57,11 +66,15 @@
         <mat-icon [routerLink]="'/user'" >perm_identity</mat-icon>
       </button>
       <a [routerLink]="'/user'" >{{user.name}}</a>
-
+      <button (click)="logout()"  mat-icon-button class="ml20">
+        <mat-icon >add_shopping_cart</mat-icon>
+        <a class="g_b"><sub><b>0</b></sub></a>
+      </button>
       <button (click)="logout()"  mat-icon-button class="ml20">
         <mat-icon >exit_to_app</mat-icon>
       </button>
       <a (click)="logout()">Logout</a>
+      
     </mat-toolbar-row>
   </mat-toolbar>   
 </div>
